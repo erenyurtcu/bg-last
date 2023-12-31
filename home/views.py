@@ -31,7 +31,7 @@ def atolye_iletisim(request):
 
 
 
-#### burada fotoğrafları teker teker açan html sayfaları üret pk mantığıyla (admin için yap bunu)
+#### burada fotoğrafları teker teker açan html sayfaları üret pk mantığıyla
 ####
 
 
