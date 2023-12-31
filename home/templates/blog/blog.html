@@ -1,0 +1,33 @@
+
+{% load static %}
+
+{% block template %}
+{% include 'partials/nav.html' %}
+{% endblock %}
+
+{% block content %}
+
+<ol class="articles">
+    {% for post in posts %}
+    <li class="article">
+        <div class="article__main">
+            <a href="{% url 'postdetail' post.id %}">
+    
+            <div class="article__image-container">
+                <img href="{% url 'postdetail' post.id %}"><img src="{{ post.image.url }}" class="article__image">
+            </div>
+            <div class="article__content">
+                <h5 class="article__title">{{ post.content|truncatechars:50}}</h5>
+                <p class="article__description">{{ post.date_post }}</p>
+            </div>
+            </a>
+        </div>
+    </li>
+    {% endfor %}
+</ol>
+
+{% include 'partials/footer.html' %}
+
+
+{% endblock %}
+    

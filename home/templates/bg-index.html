@@ -1,0 +1,27 @@
+{% include 'partials/bg-nav.html' %}
+{% load static %}
+{% block content %}
+  <ol class="blog-posts">
+      {% for atly in atolye %}
+                <li class="blog-post">
+                    <div class="blog-thumb">
+                      <img src="{{ atly.image.url }}" alt="">
+                      <div class="down-content">
+                        <span>{{ atly.title }}</span>
+                        <h4>Aenean pulvinar gravida sem nec</h4>
+                        <ul class="post-info">
+                          <li>{{ atly.date_ato }}</li>
+                        </ul>
+                          <p>{{ atly.content }}</p>
+                      </div>
+                    </div>
+                </li>
+        {% endfor %}
+  </ol>
+
+  
+
+{% include 'partials/footer.html' %}
+
+</body>
+{% endblock %}
